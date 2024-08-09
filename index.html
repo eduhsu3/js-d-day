@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="container">
+                <div class="header">
+                    <h1 class="top_title"><span>D-day</span><span>Calculator</span></h1>
+                </div>
+                <div class="current_box round_box">
+                    <p class="today_text"><span id="printTodayDate">0000년 00월 00일</span> <span id="printTodayTime">00시 00분 00초</span></p>
+                </div>
+                <div class="form_box round_box">
+                    <div class="user_title_text"><label for="titleInput">D-day 제목</label><input type="text" name="" id="titleInput" /></div>
+                    <div class="user_date_text"><label for="dateInput">D-day 날짜</label><input type="date" name="" id="dateInput" /></div>
+                    <div class="bottom_btn_wrap"><button id="bottomBtn">확인</button></div>
+                </div>
+                <ul id="printWrap"></ul>
+                <template id="item-template">
+                    <li class="round_box">
+                        <div class="default_block">
+                            <div class="viewGroup">
+                                <p id="titleText"></p>
+                                <p id="dateText">00일 남았습니다</p>
+                            </div>
+                            <div class="btnGroup">
+                                <button type="button" id="modifyBtn">수정</button>
+                                <button type="button" id="deleteBtn">삭제</button>
+                            </div>
+                        </div>
+                        <div class="modify_block" style="display: none">
+                            <div class="inputGroup">
+                                <div class="modify_title"><input type="text" name="" id="modifyTitleInput" /></div>
+                                <div class="modify_date"><input type="date" name="" id="modifyDateInput" /></div>
+                            </div>
+                            <div class="btnGroup">
+                                <button type="button" id="modifySubmitBtn">완료</button>
+                                <button type="button" id="modifyCancelBtn">취소</button>
+                            </div>
+                        </div>
+                    </li>
+                </template>
+            </div>
+        </div>
+        <script src="js/dday.js"></script>
+    </body>
+</html>
